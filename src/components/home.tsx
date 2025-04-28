@@ -193,7 +193,11 @@ const HomePage = () => {
                 <Button variant="ghost" size="sm" asChild>
                   <Link to="/login">Log in</Link>
                 </Button>
-                <Button size="sm" asChild>
+                <Button 
+                  size="sm" 
+                  asChild
+                  className="bg-[#800000] hover:bg-[#8B0000] text-white"
+                >
                   <Link to="/signup">Sign up</Link>
                 </Button>
               </div>
@@ -292,7 +296,10 @@ const HomePage = () => {
                     </Avatar>
                     <span className="text-sm">{featuredPost.author.name}</span>
                   </div>
-                  <Button asChild>
+                  <Button 
+                    asChild
+                    className="bg-[#800000] hover:bg-[#8B0000] text-white"
+                  >
                     <Link to={`/post/${featuredPost.id}`}>Read More</Link>
                   </Button>
                 </div>
