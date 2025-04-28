@@ -60,7 +60,7 @@ const BlogPostCard = ({
   });
 
   return (
-    <Card className="overflow-hidden flex flex-col h-full bg-white hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden flex flex-col h-full bg-card hover:shadow-lg transition-shadow duration-300 border border-border">
       <div className="relative h-48 overflow-hidden">
         <img
           src={featuredImage}
@@ -72,13 +72,17 @@ const BlogPostCard = ({
       <CardHeader className="pb-2">
         <div className="flex flex-wrap gap-2 mb-2">
           {categories?.map((category) => (
-            <Badge key={category.id} variant="secondary" className="text-xs">
+            <Badge 
+              key={category.id} 
+              variant="secondary" 
+              className="text-xs bg-[#556B2F] hover:bg-[#6B8E23] text-white"
+            >
               {category.name}
             </Badge>
           ))}
         </div>
         <h3
-          className="text-xl font-bold line-clamp-2 hover:text-primary cursor-pointer"
+          className="text-xl font-bold line-clamp-2 hover:text-[#800000] cursor-pointer transition-colors duration-200"
           onClick={onClick}
         >
           {title}
@@ -91,7 +95,7 @@ const BlogPostCard = ({
         </p>
       </CardContent>
 
-      <CardFooter className="pt-2 border-t flex flex-col gap-2">
+      <CardFooter className="pt-2 border-t border-border flex flex-col gap-2">
         <div className="flex items-center justify-between w-full text-xs text-muted-foreground">
           <div className="flex items-center gap-1">
             <CalendarIcon className="h-3 w-3" />
@@ -119,7 +123,7 @@ const BlogPostCard = ({
             variant="ghost"
             size="sm"
             onClick={onClick}
-            className="text-xs"
+            className="text-xs hover:bg-[#800000] hover:text-white transition-colors duration-200"
           >
             Read more
           </Button>
