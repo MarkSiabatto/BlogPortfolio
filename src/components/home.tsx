@@ -263,7 +263,11 @@ const HomePage = () => {
                 <div>
                   <div className="flex gap-2 mb-2">
                     {featuredPost.categories.map((category) => (
-                      <Badge key={category} variant="secondary">
+                      <Badge 
+                        key={category} 
+                        variant="secondary"
+                        className="bg-[#556B2F] hover:bg-[#6B8E23] text-white"
+                      >
                         {category}
                       </Badge>
                     ))}
